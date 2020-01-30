@@ -16,7 +16,7 @@ include("HyperECNNs.jl")
 
 ### Bilinear Form and Activation Function
 
-Effective use of hypercomplex-valued ECNN models requires a bilinear form and an appropriate hypercomplex-valued activation functions. Precisely, to take advantages of matrix operations, the hypercomplex-valued ECNN a function called BilinearForm whose inputs are a hypercomplex-valued matrix U organized in an array of size NxPxn, a hypercomplex-valued vector x organized in an array of size Nxn, and a set of parameters:
+Effective use of hypercomplex-valued ECNN models requires a bilinear form and an appropriate hypercomplex-valued activation functions. Precisely, to take advantages of matrix operations, the hypercomplex-valued ECNN a function called BilinearForm whose inputs are a hypercomplex-valued matrix U organized in an array of size NxnxP, a hypercomplex-valued vector x organized in an array of size Nxn, and a set of parameters:
 ```
 y = BilinearForm(U,x,Params)
 ```
@@ -46,7 +46,7 @@ and
 ```
 y, Energy = HyperECNNs.Seq(BilinearForm, BilinearFormParams, ActFunction, ActFunctionParams, U, xinput, alpha = 1, beta = 0, it_max = 1.e3)
 ```
-Here, U is the hypercomplex-valued matrix whose columns correspond to the fundamental memories and organized in a real-valued array of size NxPxn (U[:,1,:] corresponds to the first fundamental memory) and xinput is a hypercomplex-valued vector organized in a real-valued array of size Nxn. The parameter alpha and beta define the excitation function f(x) = beta exp(alpha x). Finally, it_max specifies the maximum number of iterations.
+Here, U is the hypercomplex-valued matrix whose columns correspond to the fundamental memories and organized in a real-valued array of size NxnxP (U[:,:,1] corresponds to the first fundamental memory) and xinput is a hypercomplex-valued vector organized in a real-valued array of size Nxn. The parameter alpha and beta define the excitation function f(x) = beta exp(alpha x). Finally, it_max specifies the maximum number of iterations.
 
 See examples in the Jupyter notebook files.
 
