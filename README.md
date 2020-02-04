@@ -4,7 +4,7 @@ Hypercomplex numbers generalize the notion of complex and hyperbolic numbers as 
 
 ## Getting Started
 
-This repository contain the Julia source-codes of some hypercomplex-valued ECNNs, as described in the paper "Hypercomplex-Valued Recurrent Correlation NeuralNetworks" by Marcos Eduardo Valle and Rodolfo Lobo. The Jupyter-notebook of the computational experimens are also available in this repository.
+This repository contain the Julia source-codes of some hypercomplex-valued ECNNs, as described in the paper "Hypercomplex-Valued Recurrent Correlation NeuralNetworks" by Marcos Eduardo Valle and Rodolfo Lobo (see http://arxiv.org/abs/2002.00027). The Jupyter-notebook of the computational experimens are also available in this repository.
 
 ## Usage
 
